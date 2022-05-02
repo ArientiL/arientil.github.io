@@ -130,7 +130,7 @@ body{
 
 .scrolling-image {
     width:200%;
-    background: url("/Assets/header_bkg.png") repeat-x;
+    background: url("Assets/header_bkg.png") repeat-x;
     background-size: 50%;
     animation: background-slide 20s linear infinite;
     -webkit-animation: background-slide 20s linear infinite;
