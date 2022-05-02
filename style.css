@@ -1,7 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Lato:wght@100;300;400;700;900&display=swap');
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
+
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Lato', sans-serif;
+
     background-color: #ffffff;
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    margin:0;
+}
+
+:first-child{
+    margin-top: 0px;
+}
+
+.header{
+    background:white;
+    background-size:cover;
+    background-position-y: -40px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height:auto;
+    overflow:hidden;
+    display: flex;
+
+}
+
+.header-bkg{
+    position:absolute;
+    top:-70px;
+}
+
+.header-text-container{
+    text-align: center;
+    padding:60px 0;
+    margin: 0 auto;
+}
+
+#header-h1{
+    color:white;
+    line-height:1;
+    font-size:64pt;
+    margin-bottom:0px;
+    position:relative;
+    top:20px;
+    
+    animation-name: header-in;
+    animation-duration:0.75s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.8,-.5,.2,2);
+
+    -webkit-animation-name: header-in;
+    -webkit-animation-duration:0.75s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: cubic-bezier(.8,-.5,.2,2);
+
+    text-shadow:0px 5px 20px black;
+}
+
+#header-p{
+    color:white;
+    line-height:1;
+    font-size:16.0pt;
+    margin:10px 0;
+    padding:30px 0;
+    
+    animation-name: header-p-in;
+    animation-duration: calc(0.75s * 2 + 0.1s);
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+
+    -webkit-animation-name: header-p-in;
+    -webkit-animation-duration: calc(0.75s * 2 + 0.1s);
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+
+    text-shadow:0px 5px 5px black;
+}
+
+
+@keyframes header-in {
+    0%{opacity:0; letter-spacing:-0.5em; transform:translate(0, -60px);}
+    50%{ letter-spacing:-0.2em; transform:translate(0, 0px);}
+    100%{opacity:1; letter-spacing:6px;}
+}
+
+@keyframes header-p-in{
+    0%{opacity:0; letter-spacing:1; transform:translate(0, -60px);}
+    25%{opacity:0; letter-spacing:1; transform:translate(0, -60px);}
+    55%{opacity:1; letter-spacing:0.1px; transform:translate(0, 0px);}
+    80%{opacity:1; letter-spacing:15px;}
+    100%{opacity:1; letter-spacing:15px;}
+}
+
+
+@-webkit-keyframes header-in {
+    0%{opacity:0; letter-spacing:-0.5em; transform:translate(0, -60px);}
+    50%{ letter-spacing:-0.2em; transform:translate(0, 0px);}
+    100%{opacity:1; letter-spacing:6px;}
+}
+
+@-webkit-keyframes header-p-in{
+    0%{opacity:0; letter-spacing:1; transform:translate(0, -60px);}
+    25%{opacity:0; letter-spacing:1; transform:translate(0, -60px);}
+    55%{opacity:1; letter-spacing:0.1px; transform:translate(0, 0px);}
+    80%{opacity:1; letter-spacing:15px;}
+    100%{opacity:1; letter-spacing:15px;}
+}
+
+.scrolling-image-container {
+    position:absolute;
+    overflow: hidden;
+    display: flex;
+    width:200%;
+    height:306.68px;
+
+    animation-name: background-slide-fade;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-name: background-slide-fade;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.scrolling-image {
+    width:200%;
+    background: url("/Assets/header_bkg.png") repeat-x;
+    background-size: 50%;
+    animation: background-slide 20s linear infinite;
+    -webkit-animation: background-slide 20s linear infinite;
+}
+
+@keyframes background-slide {
+    0% {transform: translate(0);}
+    100% {
+      transform: translate(-50%); /* The image width */
+    }
+}
+
+@-webkit-keyframes background-slide {
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translate(-50%); /* The image width */
+    }
+}
+
+
+@keyframes background-slide-fade {
+    0% {
+      opacity:0;
+    }
+    20% {opacity:0;}
+    100%{opacity:1;}
+}
+
+
+@-webkit-keyframes background-slide-fade {
+    0% {
+      opacity:0;
+    }
+    20% {opacity:0;}
+    100%{opacity:1;}
 }
