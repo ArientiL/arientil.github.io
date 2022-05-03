@@ -20,6 +20,7 @@ body{
 
 .header{
     background:white;
+    user-select: none;
     background-size:cover;
     background-position-y: -40px;
     background-repeat: no-repeat;
