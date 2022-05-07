@@ -46,6 +46,7 @@ body{
 .header-text{
     color:white;
     line-height:1;
+
 }
 
 #header-h1{
@@ -203,4 +204,18 @@ body{
     }
     15% {opacity:0;}
     100%{opacity:1;transform:translate(0, 0px);}
+}
+
+
+:root{
+    --navbar-height: 70px;
+}
+
+.navbar{
+
+    width:100vw;
+    height:var(--navbar-height);
+
+    z-index: 99;
+    position:fixed;
 }
