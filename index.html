@@ -14,6 +14,10 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" type="text/css" href="style.css"> 
+    
+    <script>
+        $(function(){ $("#navbar-library").load("navbar.html"); });
+    </script>
 
     <style></style>
 
@@ -22,11 +26,8 @@
    
     <div class="first"></div>
 
-    <div class="navbar">
-        <div class="navbar-link-container">
-            <div class="navbar-link"><a>Home</a></div>
-        </div>
-    </div>
+    <div id="navbar-library"></div>
+    
     <br>
     <!--Header-->
     <div class="header">
