@@ -13,7 +13,10 @@
     <meta name="og:url" content="">
     <meta name="theme-color" content="#ffffff">
 
+    
+    <link rel="stylesheet" href="w3.css">
     <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="stylesheet" type="text/css" href="CSS/module.css">
     
     <script>
         $(function(){ $("#navbar-library").load("navbar.html"); });
@@ -77,9 +80,28 @@
 
         <img src="Assets/bnw.png" style="position:relative;left:80px;top:-0px; width:40%; height:40%;">
 
-    </div>
+    </div>     
 
-    
+    <div class="w3-container">
+        <button onclick="document.getElementById('id01').style.display='block'" class=" w3-black">Open Animated Modal</button>
+      
+        <div id="id01" class="w3-modal">
+          <div class="w3-modal-content w3-animate-bottom">
+            <div class="modal-bkg">
+                <div class="w3-container modal-body"></div>
+                <span onclick="document.getElementById('id01').style.display='none'" 
+                class="w3-button w3-display-topright">&times;</span>
+                
+                <p>Some text..</p>
+                <p>Some text..</p>
+                <p>Some text..</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  
    
 </body>
 

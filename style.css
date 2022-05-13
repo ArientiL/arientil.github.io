@@ -12,8 +12,8 @@
 
 body{
 
-    font-family: 'Inconsolata', monospace;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inconsolata', monospace !important; 
+    font-family: 'Lato', sans-serif !important;
 
     background-color: #ffffff;
     background-size:cover;
@@ -63,7 +63,7 @@ a{
 }
 
 #header-h1{
-    font-size:64pt;
+    font-size:64pt !important;
     margin-bottom:0px;
     position:relative;
     top:20px;
@@ -84,7 +84,7 @@ a{
 }
 
 #header-p{
-    font-size:16.0pt;
+    font-size:16.0pt !important;
     margin:5px 0;
     padding:5px 0;
     margin-top:40px;
@@ -241,7 +241,7 @@ a{
     color:white; text-decoration: none;
     font-weight: bold;
     text-align: center;
-    font-size:30px;
+    font-size:30px !important;
     padding: 0px 30px;
     user-select: none;
     height:var(--navbar-height);
@@ -251,7 +251,7 @@ a{
     transition: 0.15s;
 }
 
-.navbar-link a{
+.navbar-link p{
 
     color:white; text-decoration: none;
     position: relative;
@@ -266,7 +266,7 @@ a{
     color:black; cursor:pointer;
 }
 
-.navbar-link:hover a{
+.navbar-link:hover p{
     color:black; cursor:pointer;
 }
 
@@ -311,8 +311,9 @@ a{
 }
 
 .section-header{
-    font-size:75px;
-    margin:0 10px;
+    font-size:75px !important;
+    font-family: 'Lato', sans-serif !important;
+    margin:0px 5px;
     width:100%;
     font-weight: bold;
     color: var(--color-white);
@@ -430,5 +431,22 @@ a{
     line-height:1.25em;
     text-align:left;
     font-weight: 500;
-    font-size:1.25em;
+    font-size:1.25em !important;
 }
+
+.modal-bkg{
+   background:black;
+}
+
+.modal-header{
+    background: var(--color-shade)
+}
+
+.modal-header h2{
+    color: var(--color-white)
+}
+
+
+
+.w3-button{color: var(--color-white); background:rgba(255,255,255,0) !important;}
+.w3-button:hover{color:var(--color-shade-bright)!important;}
