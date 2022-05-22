@@ -15,11 +15,11 @@
 
     
     <link rel="stylesheet" href="w3.css">
-    <link rel="stylesheet" type="text/css" href="style.css"> 
-    <link rel="stylesheet" type="text/css" href="CSS/module.css">
+    <link rel="stylesheet" type="text/css" href="/style.css"> 
     
     <script>
-        $(function(){ $("#navbar-library").load("navbar.html"); });
+        $(function(){ $("#navbar-library").load("/navbar.html"); });
+        $(function(){ $("#projects-library").load("/project-windows.html"); });
     </script>
 
     <style></style>
@@ -30,8 +30,20 @@
     <div class="first"></div>
 
     <div id="navbar-library"></div>
+    <br>
+    <!--Header-->
+    <div class="header" >
+        <div class="scrolling-image-container" style="margin-top:-120px;">
+            <div class="scrolling-image"></div>
+            
+        </div>       
+
+       <div class="header-text-container">
+        <h1 class="header-text" id="header-h1">PROGETTI</h1>
+        <br>
+       </div> 
+    </div> 
     
-    <div style="height:100px"></div>
 
     <!--Progetti scolastici-->
     <div class="standard-fadein" style="display:flex;">
@@ -49,10 +61,27 @@
                         <h3 class="section-header"><strong>Progetti scolastici</strong></h3>
                     </div>
                 </div>
-                <p class="section-text">
+                <div class="project-section">
+                    <div class="project-button" >
+                        <div class="project-icon" onclick="document.getElementById('idavis').style.display='block'">
+                            <img src="/Assets/icons/avis_icon.png">
+                        </div>
+                    </div>
+                    <div class="project-button" >
+                        <div class="project-icon" onclick="document.getElementById('id02').style.display='block'">
+                            <img src="/Assets/icons/video_vivalamore.jpg">
+                        </div>
+                    </div>
+                      <div class="project-button" >
+                          <div class="project-icon" onclick="document.getElementById('id01').style.display='block'">
+                              <img src="/Assets/icons/Progetto Advertising_ Team III_ Profumo_ 2acs.jpg">
+                          </div>
+                      </div>
+                      
                     
                     
-                </p> 
+                </div>
+                
 
         </div>
 
@@ -63,9 +92,9 @@
     <!--Progetti personali-->
     <div class="standard-fadein" style="display:flex;">
 
-        <div class="standard-section" id="section-left">
+        <div class="standard-section" id="section-left" style="width:100%">
 
-                <div class="section-header-container">
+                <div class="section-header-container" >
                     <div class="section-header-bar"></div>
 
                     <div class="section-header-elements">
@@ -76,15 +105,61 @@
                         <h3 class="section-header"><strong>Progetti personali</strong></h3>
                     </div>
                 </div>
-                <p class="section-text">
+                <div class="project-section" >
+                    <div class="project-button" >
+                        <div class="project-icon" onclick="document.getElementById('id03').style.display='block'">
+                            <img src="/Assets/icons/silly_bot.jpg">
+                        </div>
+                    </div>
+                    <div class="project-button" >
+                        <div class="project-icon" onclick="document.getElementById('id05').style.display='block'">
+                            <img src="/Assets/icons/void3d_icon.png">
+                        </div>
+                    </div>
                     
+                    <div class="project-button" >
+                        <div class="project-icon" onclick="document.getElementById('id06').style.display='block'">
+                            <img src="/Assets/icons/monokuma_icon.png">
+                        </div>
+                    </div>
+                    <div class="project-button" >
+                        <div class="project-icon" onclick="document.getElementById('id07').style.display='block'">
+                            <img src="/Assets/icons/magolorex_icon.png">
+                        </div>
+                    </div>
+                    <div class="project-button" >
+                        <div class="project-icon" onclick="document.getElementById('id08').style.display='block'">
+                            <img src="/Assets/icons/molten_icon.png">
+                        </div>
+                    </div>
+                    <div class="project-button" >
+                        <div class="project-icon" onclick="document.getElementById('id04').style.display='block'">
+                            <img src="/Assets/icons/band_icon.png">
+                        </div>
+                    </div>
+                    <div class="project-button" >
+                        <div class="project-icon" onclick="document.getElementById('id09').style.display='block'">
+                            <img src="/Assets/icons/RAYMAN_ICON.png">
+                        </div>
+                    </div>
+                    <div class="project-button" >
+                        <div class="project-icon" onclick="document.getElementById('idufo').style.display='block'">
+                            <img src="/Assets/icons/NEW_silly_ufo.png">
+                        </div>
+                    </div>
                     
-                </p> 
+                  </div>
+              </div>
 
         </div>
 
     </div>
-    
+    <div style="height:50px;"></div>
+
+    <div id="projects-library"></div>
+    <script type="text/javascript">
+        $('.w3-modal-content').click(function (event) {event.stopPropagation();});
+    </script>
    
 </body>
 

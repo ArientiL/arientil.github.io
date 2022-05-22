@@ -299,6 +299,7 @@ a{
 .section-header-container{
   overflow:hidden;
   display: flex;
+  width:100vw;
 }
 
 .section-header-bar{
@@ -435,7 +436,17 @@ a{
 }
 
 .modal-bkg{
-   background:black;
+   background:rgb(0, 0, 0);
+padding:0.5px 0;
+   margin-top:-15px;
+}
+
+.modal-body{
+    z-index: 10000 !important;
+    height:auto;
+    overflow: auto;
+    transform:rotate(-0.5deg);
+    padding:6px;
 }
 
 .modal-header{
@@ -448,5 +459,110 @@ a{
 
 
 
-.w3-button{color: var(--color-white); background:rgba(255,255,255,0) !important;}
-.w3-button:hover{color:var(--color-shade-bright)!important;}
+.modal-close{color: var(--color-black); background:rgba(255,255,255,0) !important; transition:all 0.2s !important;
+ 
+}
+.modal-close:hover{color:var(--color-shade-bright)!important; cursor:pointer;}
+
+
+.modal-bkg2{
+    background:white;
+    border-radius: 2vh;
+    width:97%; height:95%;
+    margin:30px auto;
+    transform:rotate(0.5deg);
+}
+
+.modal-title{
+    text-align: center;
+    color:black;
+    font-weight: bold;
+    font-size: 60pt;
+    letter-spacing:1px;
+    user-select: none;
+    line-height:1em;
+}
+
+.modal-title-hr{
+    background:black;
+    width:85%;
+    height:5px;
+    margin:0 auto;
+    margin-top:-15px;
+    transform:rotate(-0.1deg);
+}
+
+.modal-info{
+    margin-top:8px;
+    padding:0px 5px;
+    line-height: 1.5em;
+    font-size:20px;
+}
+
+.modal-image-container{
+
+    background:black;
+    margin:10px auto;
+    border-radius: 1vh;
+    display:flex;
+    width:80%;
+    transform:rotate(-1deg);
+    align-items:center;
+    justify-content:center;
+}
+
+.modal-image{
+    transform:rotate(1deg);
+    padding:5px;
+    margin: 10px 0;
+    background: linear-gradient(black 10%, white 50%, black 90%);
+    border-radius: 1vh;
+}
+
+.project-section{
+    margin:0;
+    margin-top:10px;
+    display:flex;
+}
+
+:root{
+    --art-size:150px;
+}
+
+.project-button{
+    margin:0 10px;
+    width:var(--art-size);
+    height:var(--art-size);
+
+    overflow:hidden;
+    background:black;
+    display:flex; align-items:center; justify-content:center;
+}
+
+.project-icon{
+    width:calc(var(--art-size) - 30px);
+    height:calc(var(--art-size) - 30px);
+    background:white;
+    transform:rotate(-1deg);
+    border-radius: 1vh;
+    overflow:hidden;
+    transition: all 0.2s;
+    display:flex; align-items:center; justify-content:center;
+}
+
+.project-icon:hover{
+    width:calc(var(--art-size) - 10px);
+    height:calc(var(--art-size) - 10px);
+    transform:rotate(0deg);
+    cursor:pointer;
+}
+
+.project-icon img{
+    width:90%; height:90%;
+}
+
+.modal-p{
+    font-size:1.25em;
+    margin:0 10px;
+    padding:10px 0;
+}
