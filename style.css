@@ -523,6 +523,7 @@ padding:0.5px 0;
     margin:0;
     margin-top:10px;
     display:flex;
+    flex-wrap: wrap;
 }
 
 :root{
@@ -530,7 +531,7 @@ padding:0.5px 0;
 }
 
 .project-button{
-    margin:0 10px;
+    margin:5px 10px;
     width:var(--art-size);
     height:var(--art-size);
 
