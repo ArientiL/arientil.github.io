@@ -131,6 +131,8 @@
 
         document.body.classList.remove('onmodal');
 
+        
+
         var _id = this.id;
 
         console.log('Closing modal "' + _id + '"');
@@ -173,9 +175,9 @@
     //Iterate through the modal close buttons
     const modalCloseButtons = document.getElementsByClassName('modal-close');
 
-    for (var a = 0; a < modalCloseButtons.length; a++) {
+    for (var i = 0; i < modalCloseButtons.length; i++) {
 
-        modalCloseButtons[a].onclick = closeModal;
+        modalCloseButtons[i].onclick = function(){console.log(2)};
 
     }
 
@@ -255,3 +257,11 @@ var footer = document.getElementsByClassName('site-footer');
 for (var o = footer.length - 1; o >= 0; o--) { footer[0].innerHTML = 'Arienti Lorenzo 2022'; }
 
 
+    // Selecting the iframe element
+    var iframe = document.getElementById("myIframe");
+    
+    // Adjusting the iframe height onload event
+    iframe.onload = function(){
+        iframe.style.width = iframe.contentWindow.document.body.scrollWidth + 'px';
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
