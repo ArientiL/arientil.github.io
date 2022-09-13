@@ -152,6 +152,12 @@
                     _videochildren[j].pause();
                 }
 
+                var _iframes = _mybody.children[1].getElementsByTagName("iframe");
+
+                for (var t = 0; t < _iframes.length; t++){
+                    _iframes[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                }
+
                 _modal.classList.remove('modal-active');
                 _mybody.classList.remove('modal-body-active')
 
