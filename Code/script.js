@@ -183,7 +183,7 @@
 
     for (var i = 0; i < modalCloseButtons.length; i++) {
 
-        modalCloseButtons[i].onclick = function(){console.log(2)};
+        modalCloseButtons[i].onclick = closeModal
 
     }
 
