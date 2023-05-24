@@ -1,3 +1,4 @@
+
 {//MODAL SYSTEM
 
     /*
@@ -131,8 +132,6 @@
 
         document.body.classList.remove('onmodal');
 
-        
-
         var _id = this.id;
 
         console.log('Closing modal "' + _id + '"');
@@ -150,12 +149,6 @@
 
                 for (var j = 0; j < _videochildren.length; j++){
                     _videochildren[j].pause();
-                }
-
-                var _iframes = _mybody.children[1].getElementsByTagName("iframe");
-
-                for (var t = 0; t < _iframes.length; t++){
-                    _iframes[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
                 }
 
                 _modal.classList.remove('modal-active');
@@ -181,9 +174,9 @@
     //Iterate through the modal close buttons
     const modalCloseButtons = document.getElementsByClassName('modal-close');
 
-    for (var i = 0; i < modalCloseButtons.length; i++) {
+    for (var a = 0; a < modalCloseButtons.length; a++) {
 
-        modalCloseButtons[i].onclick = closeModal
+        modalCloseButtons[a].onclick = closeModal;
 
     }
 
@@ -259,15 +252,38 @@ for (var o = links.length - 1; o >= 0; o--) {
 
 }
 
-var footer = document.getElementsByClassName('site-footer');
-for (var o = footer.length - 1; o >= 0; o--) { footer[0].innerHTML = 'Arienti Lorenzo 2022'; }
 
 
-    // Selecting the iframe element
-    var iframe = document.getElementById("myIframe");
+{
+
+    const date = new Date();
+
+    var footer = document.getElementsByClassName('site-footer');
+    for (var o = footer.length - 1; o >= 0; o--) { footer[0].innerHTML = 'Arienti L. '+date.getFullYear(); }
     
-    // Adjusting the iframe height onload event
-    iframe.onload = function(){
-        iframe.style.width = iframe.contentWindow.document.body.scrollWidth + 'px';
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    const day = date.getDate();
+    const month = date.getMonth()+1;
+    
+    if(month == 10 && day>=29){
+    
+        //Set halloween style
+        const HalloweenLink = document.getElementById('halloweenStyle');
+    
+        HalloweenLink.setAttribute("href",'\\Code\\halloween_style.css')
+    
+        const ElectroPFP = document.getElementById('electroImg');
+    
+        ElectroPFP.setAttribute("src","\\Assets\\electro_halloween.png");
     }
+    else if(month == 12 && day>=20 && day<30){
+
+        const ChristmasLink = document.getElementById('christmasStyle');
+
+        ChristmasLink.setAttribute('href','\\Code\\christmas_style.css')
+
+        //const 
+
+    }
+    
+
+}

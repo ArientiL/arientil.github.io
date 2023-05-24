@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#FFE300">
+    <meta property="og:title" content="Arienti L - Arte">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://arientil.github.io/art_2021">
+    <meta property="og:image" content="https://arientil.github.io/Assets/site_icon.png">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@EIectroDev" />
+    <meta name="twitter:creator" content="@EIectroDev" />
+
+    <title>Arienti L. - Arte</title>
+    <link rel="icon" id="site-icon" href="/Assets/site_icon.png">
+
+    <script src="\Code\jquery.js"></script>
+    <script src="\Code\ART.js"></script>
+    <script src="https://kit.fontawesome.com/e637404688.js" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <link rel="stylesheet" href="\Code\style.css">
+    <link rel="stylesheet" id="halloweenStyle" >
+    <link rel="stylesheet" id="christmasStyle" >
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+        $(function () { $(".navbar").load("navbar.html"); });
+       // $(function () { $(".art-modals").load("Modals/art_2023.html"); });
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <div class="home-backdrop" style="height: calc(var(--backdrop-height) / 2.0);" >
+
+        <div class="home-backdrop-background" style="height: calc(var(--backdrop-height) / 2.0);"></div>
+
+        <div class="home-backdrop-wrapper" style="height: calc(var(--backdrop-height) / 2.0);">
+
+            <div class="home-backdrop-elements">
+
+                <div style="text-align:center; position:relative; top:0px; font-size: .75em;">
+                    <p class="home-backdrop-myname">ARTE</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="navbar"></div>
+    <div class="left-bar"></div>
+    <div class="right-bar"></div>
+    <div class="top-bar"></div>
+    <div class="bottom-bar"></div>
+
+    <div class="site-content">
+
+
+        <div class="art-container"></div>
+
+        <div class="site-footer">
+            <p>Electro 2022</p>
+        </div>
+    
+    </div>
+
+    <div class="art-modals"></div>
+
+
+    <script src="\Code\script.js"></script>
+
+    <script>
+
+        ArtPath = "/Assets/Art/"
+
+        const Modals = [];
+
+        
+
+        ArtPath = "/Assets/Art/"
+
+        const Modals_2023 = [];
+
+        const artNames = [
+
+
+            new Art("modal-flame", "flame.png", "Tiki torch"),
+            new Art("modal-DS", "DS.png", "MB Report DL9 - DS"),
+            new Art("modal-EIGHT", ["EIGHT_1.png", "EIGHT_2.png"], "Agent 8"),
+            new Art("modal-Splatoon-laucher", ["Cartridge Launcher.mp4","Glauncher_render.png","glauncher_wip1.PNG"], "Cartridge launcher",true),
+            new Art("modal-SL", "SL.png", "SL"),
+            new Art("modal-zake2", "zake2.png", "Zake - hunting trophy"),
+            new Art("modal-bonk", "bonk.png", 'BONK poster'),
+            new Art("modal-golden-candy", "golden candy_2.png", "Golden candy"),
+            new Art("modal-horrorboros", "horrorboros.png", "Horrorboros"),
+            new Art("modal-dl", "dl.png", "Dark Lori"),
+            new Art("modal-splattershots", "spaltshr.png", "Splattershots"),
+            new Art("modal-exposed octocopter", "exposed octocopter.png", 'Exposed octocopter'),
+            new Art("modal-banner-specials", "banner_specials.png", 'Special weapon themed Splatoon banners<br><br>'
+            +
+            "Part of <a class='normal-link' href='https://seymourschlong.github.io/splashtags/' target='_blank'>Spaghettitron's Splashtag Creator</a>"
+            ),
+            new Art("modal-stylized-inkling", "myinkling 2.png", "Stylized inkling"),
+            new Art("modal-bytes", "bytes.png", "Fnaf World's 7th anniversary"),
+            new Art("modal-beer", "beer.png", "Glass of beer"),
+            new Art("modal-ned", "ned_celHeadshot_show.png", "Ned - commission for Razur-draws"),
+            new Art("modal-tetra-bday", "bday.png", "Birthday gift for Tetracold"),
+            new Art("modal-sparkleon", "sparkle on.png", "Sparkle on"),
+            new Art("modal-tentacles", "tentacles.png", "Tentacles"),
+            new Art("modal-award", "AWARD.png", "Game Awards - Splatoon 3 for best multiplayer"),
+            new Art("modal-stingray", "stingray_can.png", "Stinger"),
+            new Art("modal-tf2_achievement", "tf2_achievement.png", "TF2 achievement style"),
+            new Art("modal-octofly", "octofly.png", "Octocopter and inkocopter"),
+            new Art("modal-electro", "electro.png", "Electro"),
+     
+            new Art("modal-molten_freddy", "molten_freddy.png", "Molten Freddy"),
+            new Art("modal-3d_silly_bot", ["3d_silly_bot.png","silly_botBSD.png"], "3D Silly bot"),
+            new Art("modal-magolor", "magolor.png", "Magolor"),
+            new Art("modal-subject", "subject.png", "Wired subject"),
+            new Art("modal-3d-void", "3d-void.png", "3D Void"),
+            new Art("modal-monokuma", "monokuma.png", "Monokuma"),
+            new Art("modal-shadow_bonnie", "shadow_bonnie.png", "Shadow Bonnie"),
+            new Art("modal-rayman_legends", "rayman_legends.png", "Rayman Legends"),
+            new Art("modal-silly_ufo", "silly_ufo.png", "3D Silly UFO"),
+            new Art("modal-ring", "ring.png", "Ring"),
+            new Art("modal-erasor_von_pencil", "erasor_von_pencil.png", "Erasor Von Pencil"),
+
+        ];
+
+        var pageArtArray = distributeInThreeArrays(artNames);
+
+        createArtColumns(pageArtArray)
+        createAndFireArtModalList(Modals_2023, pageArtArray)
+
+
+        checkArtClick();
+
+    </script>
+
+</body>
+
+</html>
+
+<!--
+     <button class="modal-open"  openmodal="modal-2">
+        Click me to open the modal
+        </button>
+-->
