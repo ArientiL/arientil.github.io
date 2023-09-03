@@ -1,51 +1,50 @@
 let ArtPath = ""
 
 class Art {
-    constructor(modalName,fileName,name="default",hasVideo=false) {
+    constructor(modalName,fileName,name="default",hasVideo=false,program=undefined) {
         this.modalName = modalName;
         this.fileName = fileName;
         this.name = name;
         this.hasVideo = hasVideo;
+        this.program = program;
     }
 }
 
 let ArtImgs = [];
 
-const createArtColumns = function(entries=[]){
+const createArtColumns = function(entries=[],divName=undefined){
 
-    const containers = document.getElementsByClassName("art-container");
+    const container = divName ? document.getElementById(divName) : document.getElementsByClassName("art-container")[0];
+
     const number = entries.length;
 
-    if(containers.length>0 && entries.length>0){
-
-        const container = containers[0];
-
-        for(let i=0; i<number; i++){
-
-            const idName = "art-column-" + i;
-
-            if(!document.getElementById(idName)){
-
-                const column = document.createElement("div");
-                column.className = "art-column";
-
-                
-                column.setAttribute("id", idName)
-
-                container.appendChild(column);
+    if(entries.length<=0){ return; }
 
 
+            for(let i=0; i<number; i++){
+
+                const idName = "art-column-"+divName+"-" + i;
+
+                if(!document.getElementById(idName)){
+
+                    const column = document.createElement("div");
+                    column.className = "art-column";
+
+                    
+                    column.setAttribute("id", idName)
+
+                    container.appendChild(column);
+
+
+
+                }
+
+                const entry = entries[i];
+
+                addArtToColumn(entry, "art-column-"+divName+"-" + i)
 
             }
-
-            const entry = entries[i];
-
-            addArtToColumn(entry, "art-column-"+i)
-
-        }
     
-    }
-
 }
 
 
@@ -193,6 +192,21 @@ const generateArtModals = function(modalArray){
 
                     }
 
+                    if(art.program!=undefined && typeof(art.program)=="string"){
+
+                        console.log("adding program")
+
+                        const program = document.createElement("p");
+                        program.style.textAlign = "center";
+                        program.style.fontFamily = "Inconsolata_site";
+                        program.style.fontSize = "1.1em"
+                        program.style.marginTop = "0"
+                        program.style.marginBottom = "0"
+                        program.innerHTML = "Creato in "+art.program
+
+                        content.appendChild(program)
+                    }
+
 
         modalsContainer.appendChild(modal);
         
@@ -272,5 +286,17 @@ const distributeInThreeArrays = function(list){
     const firstPart = list;     
 
     return [firstPart, secondPart, secondPart2, thirdPart];
+
+}
+
+const distributeInTwoArrays = function(list){
+
+    const threePartIndex = Math.floor(list.length / 3);
+
+    const secondPart = list.splice(-threePartIndex);
+    const secondPart2 = list.splice(-threePartIndex);
+    const firstPart = list;     
+
+    return [firstPart, secondPart, secondPart2];
 
 }

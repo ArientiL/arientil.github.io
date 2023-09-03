@@ -67,7 +67,14 @@
     <div class="site-content">
 
 
-        <div class="art-container"></div>
+        <h1 style="color:white; text-align:center;" id="games">ARTE 2D</h1>
+
+        <div class="art-container" id="art2D"></div>
+
+
+        <h1 style="color:white; text-align:center;" id="games">ARTE 3D</h1>
+
+        <div class="art-container" id="art3D"></div>
 
         <div class="site-footer">
             <p>Electro 2022</p>
@@ -90,59 +97,94 @@
 
         ArtPath = "/Assets/Art/"
 
-        const Modals_2023 = [];
+        const Modals_art_2D = [];
 
-        const artNames = [
+        const artNames_2D = [
 
-
-            new Art("modal-flame", "flame.png", "Tiki torch"),
-            new Art("modal-DS", "DS.png", "MB Report DL9 - DS"),
-            new Art("modal-EIGHT", ["EIGHT_1.png", "EIGHT_2.png"], "Agent 8"),
-            new Art("modal-Splatoon-laucher", ["Cartridge Launcher.mp4","Glauncher_render.png","glauncher_wip1.PNG"], "Cartridge launcher",true),
-            new Art("modal-SL", "SL.png", "SL"),
-            new Art("modal-zake2", "zake2.png", "Zake - hunting trophy"),
-            new Art("modal-bonk", "bonk.png", 'BONK poster'),
-            new Art("modal-golden-candy", "golden candy_2.png", "Golden candy"),
-            new Art("modal-horrorboros", "horrorboros.png", "Horrorboros"),
-            new Art("modal-dl", "dl.png", "Dark Lori"),
-            new Art("modal-splattershots", "spaltshr.png", "Splattershots"),
-            new Art("modal-exposed octocopter", "exposed octocopter.png", 'Exposed octocopter'),
+            new Art("modal-gaze", "gaze.png", "Exposing your inner self",false,"Clip Studio Paint"),
+            new Art("modal-tf22", "tf22.png", "Hop on TF2",false,"Clip Studio Paint"),
+            
+            new Art("modal-huggy", "huggy.png", "Impaled huggy wuggy",false,"Clip Studio Paint"),
+            new Art("modal-springLogo", "springLogo.png", "Logo per Spring Escape",false,"Illustrator"),
+            new Art("modal-philtana", "philTana.png", "Philtana - personaggio di <a class='normal-link' href='https://phisnom.com' target='_blank'>Phisnom</a>",false,"Clip Studio Paint"),
+            new Art("modal-eliter", "eliter.png", "E-liter 4K",false,"Clip Studio Paint"),
+            new Art("modal-19", "19.png", "19",false,"Clip Studio Paint"),
+            new Art("modal-rocking", "rocking.png", "Rocking",false,"Clip Studio Paint"),
+            //new Art("modal-streamer", "streamer.png", "Streamer"),
+            new Art("modal-cuttlegear", "cuttlegear.png", "Cuttlegear",false,"Clip Studio Paint"),
+            new Art("modal-kheart", "k_heart.png", "Star dream heart",false,"Clip Studio Paint"),
+            //new Art("modal-sDec", ["sDec1.png","sDec2.png","sDec3.png"], "Decoy"),
+            new Art("modal-dark2", "dark2.png", "No space too tight",false,"Clip Studio Paint"),
+            //new Art("modal-pixelCrate", "PixelCrate.gif", "Pixel crate"),
+            new Art("modal-flame", "flame.png", "Tiki torch",false,"Clip Studio Paint"),
+            new Art("modal-DS", "DS.png", "MB Report DL9 - DS",false,"Clip Studio Paint"),
+            new Art("modal-EIGHT", ["EIGHT_1.png", "EIGHT_2.png"], "Agent 8",false,"Clip Studio Paint"),
+            //new Art("modal-Splatoon-laucher", ["Cartridge Launcher.mp4","Glauncher_render.png","glauncher_wip1.PNG"], "Cartridge launcher",true),
+            new Art("modal-SL", "SL.png", "SL",false,"Clip Studio Paint"),
+            new Art("modal-zake2", "zake2.png", "Zake - hunting trophy",false,"Clip Studio Paint"),
+            new Art("modal-bonk", "bonk.png", 'BONK poster',false,"Clip Studio Paint"),
+            new Art("modal-golden-candy", "golden candy_2.png", "Golden candy",false,"Clip Studio Paint"),
+            new Art("modal-horrorboros", "horrorboros.png", "Horrorboros",false,"Clip Studio Paint"),
+            new Art("modal-dl", "dl.png", "Dark Lori",false,"Clip Studio Paint"),
+            new Art("modal-splattershots", "spaltshr.png", "Splattershots",false,"Clip Studio Paint"),
+            new Art("modal-exposed octocopter", "exposed octocopter.png", 'Exposed octocopter',false,"Clip Studio Paint"),
             new Art("modal-banner-specials", "banner_specials.png", 'Special weapon themed Splatoon banners<br><br>'
             +
             "Part of <a class='normal-link' href='https://seymourschlong.github.io/splashtags/' target='_blank'>Spaghettitron's Splashtag Creator</a>"
-            ),
-            new Art("modal-stylized-inkling", "myinkling 2.png", "Stylized inkling"),
-            new Art("modal-bytes", "bytes.png", "Fnaf World's 7th anniversary"),
-            new Art("modal-beer", "beer.png", "Glass of beer"),
-            new Art("modal-ned", "ned_celHeadshot_show.png", "Ned - commission for Razur-draws"),
-            new Art("modal-tetra-bday", "bday.png", "Birthday gift for Tetracold"),
-            new Art("modal-sparkleon", "sparkle on.png", "Sparkle on"),
-            new Art("modal-tentacles", "tentacles.png", "Tentacles"),
-            new Art("modal-award", "AWARD.png", "Game Awards - Splatoon 3 for best multiplayer"),
-            new Art("modal-stingray", "stingray_can.png", "Stinger"),
-            new Art("modal-tf2_achievement", "tf2_achievement.png", "TF2 achievement style"),
-            new Art("modal-octofly", "octofly.png", "Octocopter and inkocopter"),
-            new Art("modal-electro", "electro.png", "Electro"),
+            ,false,"Clip Studio Paint"),
+            new Art("modal-stylized-inkling", "myinkling 2.png", "Stylized inkling",false,"Clip Studio Paint"),
+            new Art("modal-bytes", "bytes.png", "Fnaf World's 7th anniversary",false,"Clip Studio Paint"),
+            new Art("modal-beer", "beer.png", "Glass of beer",false,"Clip Studio Paint"),
+            new Art("modal-ned", "ned_celHeadshot_show.png", "Ned - commission for Razur-draws",false,"Clip Studio Paint"),
+            new Art("modal-tetra-bday", "bday.png", "Birthday gift for Tetracold",false,"Clip Studio Paint"),
+            new Art("modal-sparkleon", "sparkle on.png", "Sparkle on",false,"Clip Studio Paint"),
+            new Art("modal-tentacles", "tentacles.png", "Tentacles",false,"Clip Studio Paint"),
+            new Art("modal-stingray", "stingray_can.png", "Stinger",false,"Clip Studio Paint"),
+            new Art("modal-tf2_achievement", "tf2_achievement.png", "TF2 achievement style",false,"Clip Studio Paint"),
+            new Art("modal-octofly", "octofly.png", "Octocopter and inkocopter",false,"Clip Studio Paint"),
+            new Art("modal-electro", "electro.png", "Electro",false,"Clip Studio Paint"),
      
-            new Art("modal-molten_freddy", "molten_freddy.png", "Molten Freddy"),
-            new Art("modal-3d_silly_bot", ["3d_silly_bot.png","silly_botBSD.png"], "3D Silly bot"),
-            new Art("modal-magolor", "magolor.png", "Magolor"),
-            new Art("modal-subject", "subject.png", "Wired subject"),
-            new Art("modal-3d-void", "3d-void.png", "3D Void"),
-            new Art("modal-monokuma", "monokuma.png", "Monokuma"),
-            new Art("modal-shadow_bonnie", "shadow_bonnie.png", "Shadow Bonnie"),
-            new Art("modal-rayman_legends", "rayman_legends.png", "Rayman Legends"),
-            new Art("modal-silly_ufo", "silly_ufo.png", "3D Silly UFO"),
-            new Art("modal-ring", "ring.png", "Ring"),
-            new Art("modal-erasor_von_pencil", "erasor_von_pencil.png", "Erasor Von Pencil"),
+            //new Art("modal-3d_silly_bot", ["3d_silly_bot.png","silly_botBSD.png"], "3D Silly bot"),
+            new Art("modal-magolor", "magolor.png", "Magolor",false,"Krita"),
+            new Art("modal-subject", "subject.png", "Wired subject",false,"Clip Studio Paint"),
+         
+            new Art("modal-monokuma", "monokuma.png", "Monokuma",false,"Krita"),
+            new Art("modal-rayman_legends", "rayman_legends.png", "Rayman Legends",false,"Krita"),
+            
+            new Art("modal-ring", "ring.png", "Ring",false,"Krita"),
+            new Art("modal-erasor_von_pencil", "erasor_von_pencil.png", "Erasor Von Pencil",false,"Krita"),
 
         ];
 
-        var pageArtArray = distributeInThreeArrays(artNames);
+        var pageArtArray2D = distributeInThreeArrays(artNames_2D);
 
-        createArtColumns(pageArtArray)
-        createAndFireArtModalList(Modals_2023, pageArtArray)
+        createArtColumns(pageArtArray2D, "art2D")
+        createAndFireArtModalList(Modals_art_2D, pageArtArray2D)
 
+
+
+      const Modals_art_3D = [];
+
+        const artNames_3D = [
+            new Art("modal-paintS3", "paintS3.png", "Painterly Splatoon 3 models",false,"Blender"),
+            new Art("modal-streamer", "streamer.png", "Streamer",false,"Blender"),
+
+            new Art("modal-sDec", ["sDec1.png","sDec2.png","sDec3.png"], "Decoy",false,"Blender"),
+
+            new Art("modal-pixelCrate", "PixelCrate.gif", "Pixel crate",false,"Blender e Adobe Premiere Pro"),
+
+            new Art("modal-Splatoon-laucher", ["Cartridge Launcher.mp4","Glauncher_render.png","glauncher_wip1.PNG"], "Cartridge launcher",true,"Blender e Adobe Premiere Pro"),
+            new Art("modal-silly_ufo", "silly_ufo.png", "3D Silly UFO",false,"Blender"),
+            new Art("modal-3d-void", "3d-void.png", "3D Void",false,"Blender"),
+            new Art("modal-3d_silly_bot", ["3d_silly_bot.png","silly_botBSD.png"], "3D Silly bot",false,"Blender"),
+
+
+        ];
+
+        var pageArtArray3D = distributeInThreeArrays(artNames_3D);
+
+        createArtColumns(pageArtArray3D, "art3D")
+        createAndFireArtModalList(Modals_art_3D, pageArtArray3D)
 
         checkArtClick();
 
