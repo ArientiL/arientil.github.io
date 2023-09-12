@@ -81,9 +81,9 @@ const generateArtModals = function(modalArray){
 
                         const p = document.createElement("p");
                         p.style.textAlign = "center";
-                        p.style.fontFamily = "Inconsolata_site";
-                        p.style.fontSize = "1.1em"
-                        p.style.marginTop = "0"
+                        p.style.fontFamily = '"League spartan","Inconsolata_site"';
+                        p.style.fontSize = "1.2em"
+                        p.style.marginTop = "5px"
                         p.style.marginBottom = "0"
 
                             //const node = document.createTextNode(art.name);
@@ -198,7 +198,7 @@ const generateArtModals = function(modalArray){
 
                         const program = document.createElement("p");
                         program.style.textAlign = "center";
-                        program.style.fontFamily = "Inconsolata_site";
+                        program.style.fontFamily = '"League spartan thin","Inconsolata_site"';
                         program.style.fontSize = "1.1em"
                         program.style.marginTop = "0"
                         program.style.marginBottom = "0"
