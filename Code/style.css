@@ -686,8 +686,13 @@ h1 {
     }
 
     to {
-        transform: scale(1.5);
+        transform: scale(1.5) ;
         filter: opacity(0);
+    }
+    
+    100%{
+        opacity: 0;
+        transform: translateY(99999px)
     }
 }
 
@@ -748,6 +753,12 @@ h1 {
 .modal-img {
     width: 90%;
     max-width: 800px;
+}
+
+.modal-video {
+    aspect-ratio: 16/9;
+    border:none;
+    background-color: var(--color-black);
 }
 
 .onmodal {
@@ -1447,7 +1458,7 @@ Game buttons
 
 .game-button-title {
     margin: 0;
-    font-size: 3.5vw;
+    font-size: 3vw;
     color: var(--color-b-yellow)
 }
 
